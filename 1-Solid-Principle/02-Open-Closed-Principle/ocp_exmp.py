@@ -27,7 +27,8 @@ class Shape:
 
 
 '''
-In the bad example, the Shape class violates the Open-Closed Principle because the draw method checks the type of the shape and performs different actions depending on the type. This means that the class is not closed for modification because it needs to be modified every time a new type of shape is added.
+In the bad example, the Shape class violates the Open-Closed Principle because the draw method checks the type of the shape and performs different actions 
+depending on the type. This means that the class is not closed for modification because it needs to be modified every time a new type of shape is added.
 
 '''
 
@@ -83,5 +84,8 @@ print(circle_drawer.draw(circle))
 
 
 '''
-In the good example, the Shape class is modified to have only one responsibility: calculating the area of the shape. The Rectangle and Circle classes inherit from Shape and override the area method with their own implementation. A new ShapeDrawer class is created to handle the drawing of shapes, which keeps the Shape class closed for modification. The client code can then create instances of the Rectangle and Circle classes and pass them to the ShapeDrawer to draw them without modifying any existing code.
+In the good example, the Shape class is modified to have only one responsibility: calculating the area of the shape. The Rectangle and Circle classes inherit 
+from Shape and override the area method with their own implementation. A new ShapeDrawer class is created to handle the drawing of shapes, which keeps the Shape
+class closed for modification. The client code can then create instances of the Rectangle and Circle classes and pass them to the ShapeDrawer to draw them 
+without modifying any existing code.
 '''
