@@ -36,9 +36,12 @@ class Square(Rectangle):
 
 
 '''
-In this example, we have a Rectangle class with a set_width and set_height method that sets the width and height of the rectangle. We also have a Square class that inherits from Rectangle, and overrides the set_width and set_height methods to ensure that the width and height are always equal (since a square has equal sides).
+In this example, we have a Rectangle class with a set_width and set_height method that sets the width and height of the rectangle. We also have a Square class
+that inherits from Rectangle, and overrides the set_width and set_height methods to ensure that the width and height are always equal (since a square has equal
+sides).
 
-However, this violates the Liskov Substitution Principle because a Square object cannot be substituted for a Rectangle object. If we create a Square object and try to set its width and height separately, we'll end up with a square that is no longer square:
+However, this violates the Liskov Substitution Principle because a Square object cannot be substituted for a Rectangle object. If we create a Square object 
+and try to set its width and height separately, we'll end up with a square that is no longer square:
 '''
 
 
@@ -53,7 +56,8 @@ square = Square(3)
 print_area(square)  # Prints "Area: 12" (incorrect)
 
 '''
-This violates the Liskov Substitution Principle because a Square object should be able to be substituted for a Rectangle object without affecting the correctness of the program.
+This violates the Liskov Substitution Principle because a Square object should be able to be substituted for a Rectangle object without affecting the
+correctness of the program.
 '''
 
 # Following LSP
@@ -97,7 +101,9 @@ print_area(rectangle)
 print_area(square)
 
 '''
-In this example, we have defined an abstract base class Shape that defines an abstract method get_area(). The Rectangle and Square classes implement this method to return the area of the respective shape. This ensures that any subclass of Shape can be used in place of a Shape object without breaking the contract of the Shape class.
+In this example, we have defined an abstract base class Shape that defines an abstract method get_area(). The Rectangle and Square classes implement 
+this method to return the area of the respective shape. This ensures that any subclass of Shape can be used in place of a Shape object without breaking 
+the contract of the Shape class.
 '''
 
 # OR
@@ -153,7 +159,9 @@ The Square class overrides the __init__() method to take only one parameter for 
 
 The Circle class is created as a separate class and it implements the area() method in a way that is different from the Quadrilateral subclasses.
 
-The get_total_area() function takes a list of Shape objects and calculates the total area by calling the area() method on each of them. This function can work with any subclass of Shape, including Rectangle, Square, and Circle, without knowing anything about their internal implementations.
+The get_total_area() function takes a list of Shape objects and calculates the total area by calling the area() method on each of them. This function can work
+with any subclass of Shape, including Rectangle, Square, and Circle, without knowing anything about their internal implementations.
 
-This code follows the Liskov Substitution Principle because each subclass of Shape can be used in place of its parent class without affecting the correctness of the program. In other words, the get_total_area() function can work with any object that implements the area() method, regardless of its specific subclass.
+This code follows the Liskov Substitution Principle because each subclass of Shape can be used in place of its parent class without affecting the correctness 
+of the program. In other words, the get_total_area() function can work with any object that implements the area() method, regardless of its specific subclass.
 '''
