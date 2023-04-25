@@ -1,5 +1,6 @@
 '''
-Interface Segregation Principle (ISP): A client should not be forced to depend on interfaces it does not use. In other words, classes should not implement interfaces that contain methods they do not need.
+Interface Segregation Principle (ISP): A client should not be forced to depend on interfaces it does not use. In other words, classes should not implement 
+interfaces that contain methods they do not need.
 '''
 # Violation of ISP:
 
@@ -19,7 +20,8 @@ class Machine:
 
 
 '''
-This class violates the ISP because it includes methods that are not relevant to all the clients that use it. For example, some clients may only need to print documents and do not require the fax or scan methods.
+This class violates the ISP because it includes methods that are not relevant to all the clients that use it. For example, some clients may only need to
+print documents and do not require the fax or scan methods.
 '''
 
 # Following ISP:
@@ -101,5 +103,7 @@ if __name__ == '__main__':
     main()
 
 '''
-Here, we have separated the interface into smaller, more specific interfaces that can be implemented by clients based on their requirements. We have also created a composite interface called AllInOne that combines all three interfaces and can be used by clients that need all three functionalities. By doing so, we have followed the ISP and ensured that the clients are not forced to implement unnecessary methods.
+Here, we have separated the interface into smaller, more specific interfaces that can be implemented by clients based on their requirements. We have also 
+created a composite interface called AllInOne that combines all three interfaces and can be used by clients that need all three functionalities. By doing so,
+we have followed the ISP and ensured that the clients are not forced to implement unnecessary methods.
 '''
