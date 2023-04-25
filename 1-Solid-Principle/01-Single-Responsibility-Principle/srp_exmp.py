@@ -28,7 +28,8 @@ class Employee:
 
 
 '''
-In this example, the Employee class has multiple responsibilities: calculating an employee's salary, saving an employee's information to a database, and sending an email to the employee. This violates the Single Responsibility Principle because the class has more than one reason to change.
+In this example, the Employee class has multiple responsibilities: calculating an employee's salary, saving an employee's information to a database, and sending 
+an email to the employee. This violates the Single Responsibility Principle because the class has more than one reason to change.
 '''
 
 
@@ -65,5 +66,7 @@ database.save_employee(employee)
 sender.send_email(employee)
 
 '''
-In this example, the responsibilities are separated into three different classes: SalaryCalculator, EmployeeDatabase, and EmailSender. Each class has a single responsibility, which makes the code more modular and easier to maintain. The client code can then create instances of each class and call their respective methods to perform the desired actions.
+In this example, the responsibilities are separated into three different classes: SalaryCalculator, EmployeeDatabase, and EmailSender. Each class has a single
+responsibility, which makes the code more modular and easier to maintain. The client code can then create instances of each class and call their respective
+methods to perform the desired actions.
 '''
