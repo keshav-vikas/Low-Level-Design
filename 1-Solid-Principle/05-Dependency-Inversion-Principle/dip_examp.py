@@ -1,6 +1,7 @@
 '''
 Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions, not concretions.
-High-level modules should not depend on low-level modules. Instead, both should depend on abstractions. Additionally, abstractions should not depend on details. Details should depend on abstractions.
+High-level modules should not depend on low-level modules. Instead, both should depend on abstractions. Additionally, abstractions should not depend on details.
+Details should depend on abstractions.
 Make classes depend on abstract classes rather than non-abstract classes.
         e.g. Make classes inherit from abstract classes.
 '''
@@ -39,7 +40,8 @@ switch.press()
 switch.press()
 
 '''
-In this example, the ElectricPowerSwitch class depends directly on the LightBulb class. This violates the DIP because a high-level module (ElectricPowerSwitch) depends on a low-level module (LightBulb).
+In this example, the ElectricPowerSwitch class depends directly on the LightBulb class. This violates the DIP because a high-level module (ElectricPowerSwitch)
+depends on a low-level module (LightBulb).
 '''
 
 # Following DIP:
@@ -91,5 +93,7 @@ electric_power_switch.press()
 
 
 '''
-In this example, the ElectricPowerSwitch class depends on an abstraction (Switchable) instead of a low-level module (LightBulb). The LightBulb class implements the Switchable interface, which allows it to be passed as a dependency to the ElectricPowerSwitch class. This follows the DIP because high-level modules (ElectricPowerSwitch) depend on abstractions (Switchable) instead of low-level modules (LightBulb).
+In this example, the ElectricPowerSwitch class depends on an abstraction (Switchable) instead of a low-level module (LightBulb). The LightBulb class 
+implements the Switchable interface, which allows it to be passed as a dependency to the ElectricPowerSwitch class. This follows the DIP because high-level 
+modules (ElectricPowerSwitch) depend on abstractions (Switchable) instead of low-level modules (LightBulb).
 '''
